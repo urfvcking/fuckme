@@ -1,0 +1,48 @@
+.title {
+    font-size: 48px;
+    line-height: 1.2;
+    font-family: $bold;
+    margin-bottom: 45px;
+    span {
+        position: relative;
+        padding-bottom: 10px;
+        &::after {
+            content: "";
+            width: 102px;
+            height: 5px;
+            background-color: $moody-blue;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            @media (max-width: $phone) {
+                height: 3px;
+            }
+        }
+    }
+    &.title--white {
+        color: $white;
+        margin-bottom: 110px;
+        span {
+            position: relative;
+            padding-bottom: 5px;
+            &::after {
+                background-color: $atomic-tangerine;
+            }
+        }
+        @media (max-width: $tablet) {
+            margin-bottom: 85px;
+        }
+        @media (max-width: $phablet) {
+            margin-bottom: 60px;
+        }
+    }
+    @media (max-width: $notebook) {
+        font-size: 42px;
+    }
+    @media (max-width: $tablet-wide) {
+        font-size: 36px;
+    }
+    @media (max-width: $tablet) {
+        font-size: 30px;
+    }
+}

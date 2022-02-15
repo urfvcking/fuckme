@@ -1,0 +1,165 @@
+.header {
+    width: 100%;
+    padding: 14px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    &__container {
+        max-width: 1310px;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin: 10px 30px 0 0;
+    }
+    &__panel {
+        display: flex;
+        align-items: center;
+        @media (max-width: $tablet-wide) {
+            flex-direction: column;
+        }
+    }
+    &__registration {
+        position: relative;
+        font-size: 14px;
+        line-height: 1;
+        font-family: $bold;
+        margin: 0 27px 0 15px;
+        transition: all 0.3s ease 0s;
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $mulled-wine;
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            @media (max-width: $tablet-wide) {
+                background-color: $white;
+            }
+        }
+        &:hover {
+            color: $heliotrope;
+            &::after {
+                background-color: $heliotrope;
+            }
+        }
+        @media (max-width: $tablet-wide) {
+            font-size: 20px;
+            color: $white;
+            margin: 25px 0 45px;
+        }
+    }
+    &__btn {
+        font-size: 14px;
+        line-height: 1.4;
+        font-family: $bold;
+        color: $white;
+        padding: 13px 56px;
+        background: linear-gradient(to left, #a182d8, #af81ff, #5660cd);
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        white-space: nowrap;
+        background-size: 200%;
+        transition: 0.5s;
+        &:hover {
+            background-position: right;
+        }
+        @media (max-width: $notebook) {
+            padding: 13px 39px;
+        }
+    }
+    &__toggle {
+        display: none;
+        position: relative;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 5;
+        @media (max-width: $tablet-wide) {
+            display: block;
+        }
+        span,
+        &::before,
+        &::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: $mulled-wine;
+        }
+        &::before,
+        &::after {
+            content: "";
+        }
+        span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        &.active {
+            span {
+                transform: scale(0) translate(0px, -50%);
+            }
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+                background-color: $white;
+            }
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+                background-color: $white;
+            }
+        }
+    }
+    &__body {
+        max-width: 1020px;
+        width: 100%;
+        &.active {
+            left: 0;
+        }
+        @media (max-width: $notebook) {
+            max-width: 770px;
+        }
+        @media (max-width: $tablet-wide) {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            max-width: none;
+            height: 100vh;
+            padding: 60px 0;
+            background-color: rgba($black, 0.8);
+            backdrop-filter: blur(10px);
+            transition: left 0.3s ease 0s;
+            text-align: center;
+            overflow: auto;
+            z-index: 1;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: $tablet-wide) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

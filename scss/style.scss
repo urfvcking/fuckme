@@ -1,0 +1,141 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "mixin";
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    width: auto;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: $regular;
+    color: $mulled-wine;
+    background-color: $white;
+    scrollbar-color: $blue-marguerite #ddd;
+    scrollbar-width: thin;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+html.fixed {
+    overflow: hidden;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: $content;
+    padding: 0 15px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background-color: #ddd;
+    @media (max-width: $tablet) {
+        width: 0;
+        height: 0;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $blue-marguerite;
+    border-radius: 9em;
+    border: 2px solid #ddd;
+}
+
+.no-scroll {
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background-color: $blue-marguerite;
+    z-index: 10;
+}
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/choice";
+@import "blocks/intro";
+@import "blocks/sphere";
+@import "blocks/title";
+@import "blocks/btn";
+@import "blocks/section";
+@import "blocks/road-map";
+@import "blocks/ideas";
+@import "blocks/tabs";
+@import "blocks/select";
+@import "blocks/structure";
+@import "blocks/seo";
+@import "blocks/team";
+@import "blocks/social";
+@import "blocks/registration";
+@import "blocks/subscription";
+@import "blocks/form";
+@import "blocks/press";
+@import "blocks/animation";
+@import "blocks/footer";
+@import "blocks/scroll-top";
+@import "blocks/keyframes";

@@ -1,0 +1,45 @@
+.form {
+    &__item {
+        position: relative;
+        margin-bottom: 22px;
+        label.error {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            font-size: 14px;
+            font-style: italic;
+            color: $alizarin-crimson;
+        }
+    }
+    &__icon {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+    }
+    &__input {
+        width: 100%;
+        font-size: 14px;
+        color: $mulled-wine;
+        font-family: $bold;
+        background-color: $white;
+        border: 1px solid $gallery;
+        border-radius: 5px;
+        padding: 17px 15px 17px 47px;
+        outline: none;
+        transition: all 0.5s ease 0s;
+        &::placeholder {
+            color: $mulled-wine;
+        }
+        &:focus {
+            border-color: $salem;
+        }
+        &.error {
+            border-color: $alizarin-crimson;
+        }
+    }
+    &__btn {
+        display: block;
+        width: 100%;
+        padding: 16px;
+    }
+}

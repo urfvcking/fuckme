@@ -1,0 +1,72 @@
+.subscription {
+    padding: 82px 0 60px;
+    &__container {
+        max-width: 1237px;
+        @media (max-width: $tablet) {
+            max-width: 500px;
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+        position: relative;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+    }
+    &__img {
+        width: 54%;
+        margin: -50px 0 0 8px;
+        z-index: 1;
+        @media (max-width: $notebook) {
+            margin: -50px 0 0 0;
+        }
+        @media (max-width: $tablet) {
+            width: 100%;
+            margin: 0 0 50px 0;
+        }
+    }
+    &__bg {
+        flex: 1;
+        margin-left: -115px;
+        @media (max-width: $notebook) {
+            margin-left: -80px;
+        }
+        @media (max-width: $tablet) {
+            margin: 0 -30px 0 -80px;
+        }
+    }
+    &__content {
+        max-width: 437px;
+        width: 100%;
+        position: absolute;
+        top: 51%;
+        left: 76%;
+        transform: translate(-50%, -50%);
+        @media (max-width: $notebook) {
+            max-width: 350px;
+        }
+        @media (max-width: $tablet-wide) {
+            max-width: 270px;
+        }
+        @media (max-width: $tablet) {
+            top: 68%;
+            left: 50%;
+            max-width: 300px;
+            text-align: center;
+        }
+    }
+    &__title {
+        font-size: 36px;
+        line-height: 1.2;
+        font-family: $bold;
+        margin-bottom: 13px;
+        @media (max-width: $tablet) {
+            font-size: 30px;
+        }
+    }
+    &__text {
+        color: $manatee;
+        margin-bottom: 17px;
+    }
+}

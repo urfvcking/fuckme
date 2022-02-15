@@ -1,0 +1,39 @@
+.dd-container {
+    width: 70px !important;
+}
+
+.dd-option-image, .dd-selected-image {
+    float: none !important;
+    cursor: pointer;
+    border: 1px solid #5760CD;
+    border-radius: 50%;
+    padding: 4px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        border-color: $atomic-tangerine;
+    }
+}
+
+.dd-select {
+    width: 70px !important;
+    border: none !important;
+    background: none !important;
+}
+
+.dd-options {
+    width: 56px !important;
+    border: none !important;
+}
+
+.dd-option {
+    border: none !important;
+}
+
+.dd-option-selected {
+    background: none !important;
+}
+
+.dd-selected {
+    background: none !important;
+    outline: none;
+}

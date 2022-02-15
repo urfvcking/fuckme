@@ -1,0 +1,23 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: $bold;
+    color: $white;
+    background: linear-gradient(to left, #ff9d6e, #ff5300, #f08754);
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    white-space: nowrap;
+    background-size: 200%;
+    transition: 0.5s;
+    &__icon {
+        width: 25px;
+        height: 25px;
+        margin-left: 10px;
+    }
+    &:hover {
+        background-position: right;
+    }
+}

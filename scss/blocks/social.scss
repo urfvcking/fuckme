@@ -1,0 +1,35 @@
+.social {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__item {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 7px;
+        transition: all 0.3s ease 0s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:nth-child(1) {
+            background-color: $moody-blue;
+            &:hover {
+                background-color: $atomic-tangerine;
+            }
+        }
+        &:nth-child(2) {
+            background-color: $atomic-tangerine;
+            &:hover {
+                background-color: $moody-blue;
+            }
+        }
+    }
+    &__link {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
